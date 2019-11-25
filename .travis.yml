@@ -17,6 +17,6 @@ script:
 
 after_success:
   - travis_wait 40 npm run build
-  - npm run build
+  - npm run react-scripts build
   - firebase use default --token $FIREBASE_TOKEN
   - firebase deploy -m "Travis deploy" --non-interactive --token $FIREBASE_TOKEN
